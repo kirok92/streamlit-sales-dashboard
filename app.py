@@ -50,7 +50,7 @@ gender = st.sidebar.multiselect(
 )
 
 df_selection = df.query(
-    "City == @city & Customer_type ==@customer_type & Gender == @gender"
+    "City == @city & Customer_type == @customer_type & Gender == @gender"
 )
 
 # Check if the dataframe is empty:
@@ -60,7 +60,7 @@ if df_selection.empty:
 
 # ---- MAINPAGE ----
 st.title(":bar_chart: Sales Dashboard")
-st.markdown("##")
+st.markdown("---")
 
 # TOP KPI's
 total_sales = int(df_selection["Total"].sum())
